@@ -1,3 +1,5 @@
+package src;
+
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
@@ -7,7 +9,8 @@ public class TestRunner {
 
 	public static void main(String[] args) 
 	{
-		Result result = JUnitCore.runClasses(TestProblem1.class, TestProblem6.class);
+		Result result = JUnitCore.runClasses(TestProblem1.class,
+				TestProblem2.class, TestProblem3.class, TestProblem6.class);
 		
 		for(Failure failure : result.getFailures())
 			System.out.println(failure.toString());
